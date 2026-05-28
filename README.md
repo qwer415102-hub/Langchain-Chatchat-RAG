@@ -129,7 +129,3 @@ powershell -ExecutionPolicy Bypass -File .\scripts\check.ps1
 - `papers`：论文/RAG 演示知识库，默认提交 Markdown 演示文件。
 
 个人上传的论文 PDF、Word 文档、向量索引和数据库文件已加入 `.gitignore`，避免误传到公开仓库。
-
-## 简历描述参考
-
-基于 Langchain-Chatchat 搭建本地化论文知识库问答系统，使用 Ollama 部署 Qwen2-7B 作为生成模型，使用 bge-m3 进行文本向量化，实现文档上传、文本切分、向量检索、引用片段展示和多轮 RAG 问答。同时对 Streamlit WebUI 进行中文化和交互优化，并编写安装、启动、停止、检查和界面定制脚本，提升项目可部署性和可维护性。
