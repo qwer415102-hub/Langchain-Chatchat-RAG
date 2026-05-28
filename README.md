@@ -127,5 +127,3 @@ powershell -ExecutionPolicy Bypass -File .\scripts\check.ps1
 
 - `samples`：示例知识库，包含 Markdown、CSV、XLSX、PDF、TXT 示例文件。
 - `papers`：论文/RAG 演示知识库，默认提交 Markdown 演示文件。
-
-个人上传的论文 PDF、Word 文档、向量索引和数据库文件已加入 `.gitignore`，避免误传到公开仓库。
