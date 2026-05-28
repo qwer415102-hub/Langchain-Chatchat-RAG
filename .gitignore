@@ -1,0 +1,36 @@
+﻿.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Runtime data that should not be committed
+data/logs/
+data/temp/
+data/media/
+
+# Local databases and generated vector stores can become large.
+# Keep the sample content files, but do not commit generated indexes.
+data/knowledge_base/*/vector_store/
+data/knowledge_base/*/vs_store/
+data/knowledge_base/**/*.faiss
+data/knowledge_base/**/*.pkl
+data/knowledge_base/info.db
+
+# Local secrets
+.env
+*.key
+*.pem
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+
+# Personal uploads. Keep private papers on disk, but do not publish them.
+data/knowledge_base/papers/content/*.pdf
+data/knowledge_base/papers/content/*.doc
+data/knowledge_base/papers/content/*.docx
+
+

@@ -1,0 +1,190 @@
+﻿# 妯″瀷閰嶇疆椤?
+
+
+# 榛樿閫夌敤鐨?LLM 鍚嶇О
+DEFAULT_LLM_MODEL: qwen2:7b
+
+# 榛樿閫夌敤鐨?Embedding 鍚嶇О
+DEFAULT_EMBEDDING_MODEL: bge-m3
+
+# AgentLM妯″瀷鐨勫悕绉?(鍙互涓嶆寚瀹氾紝鎸囧畾涔嬪悗灏遍攣瀹氳繘鍏gent涔嬪悗鐨凜hain鐨勬ā鍨嬶紝涓嶆寚瀹氬氨鏄?DEFAULT_LLM_MODEL)
+Agent_MODEL: ''
+
+# 榛樿鍘嗗彶瀵硅瘽杞暟
+HISTORY_LEN: 3
+
+# 澶фā鍨嬫渶闀挎敮鎸佺殑闀垮害锛屽鏋滀笉濉啓锛屽垯浣跨敤妯″瀷榛樿鐨勬渶澶ч暱搴︼紝濡傛灉濉啓锛屽垯涓虹敤鎴疯瀹氱殑鏈€澶ч暱搴?
+MAX_TOKENS:
+
+# LLM閫氱敤瀵硅瘽鍙傛暟
+TEMPERATURE: 0.7
+
+# 鏀寔鐨凙gent妯″瀷
+SUPPORT_AGENT_MODELS:
+  - chatglm3-6b
+  - glm-4
+  - openai-api
+  - Qwen-2
+  - qwen2-instruct
+  - gpt-3.5-turbo
+  - gpt-4o
+
+# LLM妯″瀷閰嶇疆锛屽寘鎷簡涓嶅悓妯℃€佸垵濮嬪寲鍙傛暟銆?
+# `model` 濡傛灉鐣欑┖鍒欒嚜鍔ㄤ娇鐢?DEFAULT_LLM_MODEL
+LLM_MODEL_CONFIG:
+  preprocess_model:
+    model: ''
+    temperature: 0.05
+    max_tokens: 4096
+    history_len: 10
+    prompt_name: default
+    callbacks: false
+  llm_model:
+    model: ''
+    temperature: 0.9
+    max_tokens: 4096
+    history_len: 10
+    prompt_name: default
+    callbacks: true
+  action_model:
+    model: ''
+    temperature: 0.01
+    max_tokens: 4096
+    history_len: 10
+    prompt_name: ChatGLM3
+    callbacks: true
+  postprocess_model:
+    model: ''
+    temperature: 0.01
+    max_tokens: 4096
+    history_len: 10
+    prompt_name: default
+    callbacks: true
+  image_model:
+    model: sd-turbo
+    size: 256*256
+
+# # 妯″瀷鍔犺浇骞冲彴閰嶇疆
+
+
+# # 骞冲彴鍚嶇О
+# platform_name: xinference
+
+# # 骞冲彴绫诲瀷
+# # 鍙€夊€硷細['xinference', 'ollama', 'oneapi', 'fastchat', 'openai', 'custom openai']
+# platform_type: xinference
+
+# # openai api url
+# api_base_url: http://127.0.0.1:9997/v1
+
+# # api key if available
+# api_key: EMPTY
+
+# # API 浠ｇ悊
+# api_proxy: ''
+
+# # 璇ュ钩鍙板崟妯″瀷鏈€澶у苟鍙戞暟
+# api_concurrencies: 5
+
+# # 鏄惁鑷姩鑾峰彇骞冲彴鍙敤妯″瀷鍒楄〃銆傝涓?True 鏃朵笅鏂逛笉鍚屾ā鍨嬬被鍨嬪彲鑷姩妫€娴?
+# auto_detect_model: false
+
+# # 璇ュ钩鍙版敮鎸佺殑澶ц瑷€妯″瀷鍒楄〃锛宎uto_detect_model 璁句负 True 鏃惰嚜鍔ㄦ娴?
+# llm_models: []
+
+# # 璇ュ钩鍙版敮鎸佺殑宓屽叆妯″瀷鍒楄〃锛宎uto_detect_model 璁句负 True 鏃惰嚜鍔ㄦ娴?
+# embed_models: []
+
+# # 璇ュ钩鍙版敮鎸佺殑鍥惧儚鐢熸垚妯″瀷鍒楄〃锛宎uto_detect_model 璁句负 True 鏃惰嚜鍔ㄦ娴?
+# text2image_models: []
+
+# # 璇ュ钩鍙版敮鎸佺殑澶氭ā鎬佹ā鍨嬪垪琛紝auto_detect_model 璁句负 True 鏃惰嚜鍔ㄦ娴?
+# image2text_models: []
+
+# # 璇ュ钩鍙版敮鎸佺殑閲嶆帓妯″瀷鍒楄〃锛宎uto_detect_model 璁句负 True 鏃惰嚜鍔ㄦ娴?
+# rerank_models: []
+
+# # 璇ュ钩鍙版敮鎸佺殑 STT 妯″瀷鍒楄〃锛宎uto_detect_model 璁句负 True 鏃惰嚜鍔ㄦ娴?
+# speech2text_models: []
+
+# # 璇ュ钩鍙版敮鎸佺殑 TTS 妯″瀷鍒楄〃锛宎uto_detect_model 璁句负 True 鏃惰嚜鍔ㄦ娴?
+# text2speech_models: []
+MODEL_PLATFORMS:
+  - platform_name: xinference
+    platform_type: xinference
+    api_base_url: http://127.0.0.1:9997/v1
+    api_key: EMPTY
+    api_proxy: ''
+    api_concurrencies: 5
+    auto_detect_model: true
+    llm_models: []
+    embed_models: []
+    text2image_models: []
+    image2text_models: []
+    rerank_models: []
+    speech2text_models: []
+    text2speech_models: []
+  - platform_name: ollama
+    platform_type: ollama
+    api_base_url: http://127.0.0.1:11434/v1
+    api_key: EMPTY
+    api_proxy: ''
+    api_concurrencies: 5
+    auto_detect_model: false
+    llm_models:
+      - qwen:7b
+      - qwen2:7b
+    embed_models:
+      - bge-m3
+    text2image_models: []
+    image2text_models: []
+    rerank_models: []
+    speech2text_models: []
+    text2speech_models: []
+  - platform_name: oneapi
+    platform_type: oneapi
+    api_base_url: http://127.0.0.1:3000/v1
+    api_key: EMPTY
+    api_proxy: ''
+    api_concurrencies: 5
+    auto_detect_model: false
+    llm_models:
+      - chatglm_pro
+      - chatglm_turbo
+      - chatglm_std
+      - chatglm_lite
+      - qwen-turbo
+      - qwen-plus
+      - qwen-max
+      - qwen-max-longcontext
+      - ERNIE-Bot
+      - ERNIE-Bot-turbo
+      - ERNIE-Bot-4
+      - SparkDesk
+    embed_models:
+      - text-embedding-v1
+      - Embedding-V1
+    text2image_models: []
+    image2text_models: []
+    rerank_models: []
+    speech2text_models: []
+    text2speech_models: []
+  - platform_name: openai
+    platform_type: openai
+    api_base_url: https://api.openai.com/v1
+    api_key: EMPTY
+    api_proxy: ''
+    api_concurrencies: 5
+    auto_detect_model: false
+    llm_models:
+      - gpt-4o
+      - gpt-3.5-turbo
+    embed_models:
+      - text-embedding-3-small
+      - text-embedding-3-large
+    text2image_models: []
+    image2text_models: []
+    rerank_models: []
+    speech2text_models: []
+    text2speech_models: []
+

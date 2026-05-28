@@ -1,0 +1,42 @@
+﻿# 鏈嶅姟鍣ㄥ熀鏈厤缃俊鎭?
+# 闄?log_verbose/HTTPX_DEFAULT_TIMEOUT 淇敼鍚庡嵆鏃剁敓鏁?
+# 鍏跺畠閰嶇疆椤逛慨鏀瑰悗閮介渶瑕侀噸鍚湇鍔″櫒鎵嶈兘鐢熸晥锛屾湇鍔¤繍琛屾湡闂磋鍕夸慨鏀?
+
+
+# 鐢熸垚璇ラ厤缃ā鏉跨殑椤圭洰浠ｇ爜鐗堟湰锛屽杩欓噷鐨勫€间笌绋嬪簭瀹為檯鐗堟湰涓嶄竴鑷达紝寤鸿閲嶅缓閰嶇疆鏂囦欢妯℃澘
+version: 0.3.1.3
+
+# 鏄惁寮€鍚棩蹇楄缁嗕俊鎭?
+log_verbose: false
+
+# httpx 璇锋眰榛樿瓒呮椂鏃堕棿锛堢锛夈€傚鏋滃姞杞芥ā鍨嬫垨瀵硅瘽杈冩參锛屽嚭鐜拌秴鏃堕敊璇紝鍙互閫傚綋鍔犲ぇ璇ュ€笺€?
+HTTPX_DEFAULT_TIMEOUT: 300.0
+
+# 鐭ヨ瘑搴撻粯璁ゅ瓨鍌ㄨ矾寰?
+KB_ROOT_PATH: F:\Langchain-Chatchat-RAG\data\knowledge_base
+
+# 鏁版嵁搴撻粯璁ゅ瓨鍌ㄨ矾寰勩€傚鏋滀娇鐢╯qlite锛屽彲浠ョ洿鎺ヤ慨鏀笵B_ROOT_PATH锛涘鏋滀娇鐢ㄥ叾瀹冩暟鎹簱锛岃鐩存帴淇敼SQLALCHEMY_DATABASE_URI銆?
+DB_ROOT_PATH: F:\Langchain-Chatchat-RAG\data\knowledge_base\info.db
+
+# 鐭ヨ瘑搴撲俊鎭暟鎹簱杩炴帴URI
+SQLALCHEMY_DATABASE_URI: 
+  sqlite:///F:\Langchain-Chatchat-RAG\data\knowledge_base\info.db
+
+# API 鏄惁寮€鍚法鍩?
+OPEN_CROSS_DOMAIN: false
+
+# 鍚勬湇鍔″櫒榛樿缁戝畾host銆傚鏀逛负"0.0.0.0"闇€瑕佷慨鏀逛笅鏂规墍鏈塜X_SERVER鐨刪ost
+# Windows 涓?WEBUI 鑷姩寮瑰嚭娴忚鍣ㄦ椂锛屽鏋滃湴鍧€涓?"0.0.0.0" 鏄棤娉曡闂殑锛岄渶瑕佹墜鍔ㄤ慨鏀瑰湴鍧€鏍?
+DEFAULT_BIND_HOST: 127.0.0.1
+
+# API 鏈嶅姟鍣ㄥ湴鍧€銆傚叾涓?public_host 鐢ㄤ簬鐢熸垚浜戞湇鍔″叕缃戣闂摼鎺ワ紙濡傜煡璇嗗簱鏂囨。閾炬帴锛?
+API_SERVER:
+  host: 127.0.0.1
+  port: 7861
+  public_host: 127.0.0.1
+  public_port: 7861
+
+# WEBUI 鏈嶅姟鍣ㄥ湴鍧€
+WEBUI_SERVER:
+  host: 127.0.0.1
+  port: 8501
